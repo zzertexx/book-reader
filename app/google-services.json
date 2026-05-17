@@ -1,0 +1,52 @@
+{
+  "__SETUP_INSTRUCTIONS__": [
+    "1. Go to https://console.firebase.google.com",
+    "2. Create a new project (or use an existing one)",
+    "3. Add an Android app with package name: com.bookreader",
+    "4. Download google-services.json and replace this file",
+    "5. In Firebase Console > Authentication: enable Google sign-in",
+    "6. In Firebase Console > Firestore: create a database, use these security rules:",
+    "   rules_version = '2';",
+    "   service cloud.firestore {",
+    "     match /databases/{database}/documents {",
+    "       match /users/{userId}/books/{bookId} {",
+    "         allow read, write: if request.auth != null && request.auth.uid == userId;",
+    "       }",
+    "     }",
+    "   }",
+    "7. Copy your Web Client ID from Firebase Console > Authentication > Sign-in method > Google",
+    "   and update app/src/main/res/values/strings.xml default_web_client_id"
+  ],
+  "project_info": {
+    "project_number": "REPLACE_ME",
+    "project_id": "REPLACE_ME",
+    "storage_bucket": "REPLACE_ME"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "REPLACE_ME",
+        "android_client_info": {
+          "package_name": "com.bookreader"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "REPLACE_ME",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "REPLACE_ME"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

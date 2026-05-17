@@ -1,0 +1,13 @@
+*.iml
+.gradle
+/local.properties
+/.idea
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# Don't commit real google-services.json (it contains API keys)
+# app/google-services.json  ← keep tracked as placeholder

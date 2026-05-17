@@ -1,0 +1,3 @@
+-keep class com.bookreader.data.** { *; }
+-keep class com.github.barteksc.** { *; }
+-dontwarn com.shockwave.**
